@@ -1,0 +1,69 @@
+/*Import the Partial */
+.profile-img {
+  border-radius: 999px;
+  height: 200px;
+  width: 200px;
+  border: 5px solid yellow; }
+
+h1, p {
+  color: blue; }
+
+p {
+  font-size: 24px; }
+
+nav ul {
+  background: #2c3e50;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none; }
+nav a:hover {
+  background: #16a085; }
+
+.panel, .little-panel, .big-panel {
+  border: 3px solid dodgerblue;
+  background: #ee9837;
+  margin: 10px; }
+
+/*Mixins */
+/*Steal the attributes of panel */
+.little-panel {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px; }
+
+.big-panel {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 32px;
+  padding: 20px; }
+
+/*Learning Operations */
+.button, .jumbo-button, .light-button {
+  background: #16A085;
+  border-radius: 8px;
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none; }
+
+.jumbo-button {
+  /*An Operation is being used here */
+  padding: 35px; }
+
+.light-button {
+  /*An Operation is being used here */
+  background: #21f0c8; }
+
+/*# sourceMappingURL=main.css.map */

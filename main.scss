@@ -1,0 +1,94 @@
+/*Import the Partial */
+@import "image";
+
+$primary-color: blue;
+$bg-color: #2c3e50;
+$hover-color: #16a085;
+$text-color: #ffffff;
+
+h1, p {
+  color: $primary-color;
+}
+
+p {
+  font-size: 24px;
+}
+
+nav {
+  ul {
+    background: $bg-color;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $text-color;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background: $hover-color;
+  }
+}
+
+.panel {
+  border: 3px solid dodgerblue;
+  background: #ee9837;
+  margin: 10px;
+}
+
+/*Mixins */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/*Steal the attributes of panel */
+.little-panel {
+  @extend .panel;
+  @include border-radius(5px);
+  font-size: 12px;
+  padding: 5px;
+}
+
+.big-panel {
+  @extend .panel;
+  @include border-radius(20px);
+  font-size: 32px;
+  padding: 20px;
+}
+
+/*Learning Operations */
+$buttonBackground: #16A085;
+$buttonColor: #ffffff;
+$buttonPadding: 5px;
+
+.button {
+  background: $buttonBackground;
+  border-radius: 8px;
+  color: $buttonColor;
+  display: inline-block;
+  padding: $buttonPadding;
+  text-decoration: none;
+}
+
+.jumbo-button {
+  @extend .button;
+  /*An Operation is being used here */
+  padding: $buttonPadding +30;
+}
+
+.light-button {
+  @extend .button;
+  /*An Operation is being used here */
+  background: $buttonBackground *1.5;
+}
